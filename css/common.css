@@ -1,0 +1,73 @@
+@font-face{font-family:Myriad_set_pro_Text;src:local(Myriad_set_pro_Text),url(../fonts/myriad-set-pro_text.woff)}
+*{box-sizing:border-box;font-size:.997em;font-family:"Myriad_set_pro_Text","SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif}
+html,body{margin:0}
+a{text-decoration:none;color:#316da9}
+.clear{clear:both}
+.fl_l{float:left}
+.fl_r{float:right}
+.text_field:focus{-webkit-appearance:none;border-color:#0070c9;outline:0;box-shadow:0 0 0 3px #83c0fd80;padding-left:13px}
+.percent_100{width:100%}
+html{background-color:#FFF}
+.head{/*background-color:#607d8b;*/height:47px}
+.head .head__wrap{width:940px;margin:auto;position:relative}
+.head .head__wrap .head__link{color:#000;float:left;padding:14px;transition:background .14s ease}
+.head .head__wrap .head__link:hover{background-color:#FBFBFB}
+.head .head__wrap .head__right{float:right}
+.head .head__wrap .head__left{float:left}
+.head__categories{background-color:#EEE;text-align:center;height:39px}
+.head__categories .head__wrap .head__link{color:gray;float:none;display:inline-block;padding:9px 14px}
+.head__categories .head__wrap .head__link:hover{background-color:#FBFBFB}
+.text_field{border:1px solid #BFBFBF;width:100%;height:21px;line-height:21px;padding:14px;border-radius:4px}
+.head__link__icon{padding:15px 14px 11px!important}
+.textarea{height:74px}
+.head__search_field::-webkit-input-placeholder{color:#808080}
+.head__search_field:-ms-input-placeholder{color:#808080}
+.head__search_field::-moz-placeholder{color:#808080;opacity:1}
+.head__search_field:-moz-placeholder{color:#808080;opacity:1}
+.head .head__wrap .head__search_field{width:170px; border:1px solid #4a606a!important;transition: all 0.14s ease; background-color:#324852;color:#000;background-repeat:no-repeat;background-position:8px 6px;padding-left:31px!important;text-align:left;background-image:url(/images/icons/magnify2.png);border-radius:54px}
+.head .head__wrap .head__search_field:focus{border:1px solid #000!important;outline:none;box-shadow:0 0 5px #7c7c7c;width:340px;}
+.head .head__wrap .head__search_field__wrap{width:210px;margin-left:169px;display:nonce}
+.head .head__wrap .head__search_field__wrap_2{padding-top:9px}
+.form__item_wrap{padding:7px 0}
+.form__title{text-align:center;font-size:24px;margin-bottom:21px;font-weight:700}
+.login_page__wrap{padding:77px 0}
+.label{margin-bottom:7px}
+.form__desc{text-align:center;color:gray;padding:5px 0 9px}
+.input_full_size_fix{width:101%}
+.button{border:1px solid transparent;border-radius:5px;font-weight:700;padding:0 11px;height:29px;cursor:pointer;user-select:none}
+.button_green{background-color:#607d8b;color:#FFF!important;transition:background .14s ease}
+.photo_block {
+    border-radius: 5px;
+    background-image: url(images/material-desing-color-4134.jpg);
+    width: 50px;
+    height: 50px;
+    background-color: #EEE;
+    background-size: cover;
+    background-position: center;
+}
+.icon{display:inline-block;position:relative;width:15px;height:15px;background-repeat:no-repeat}
+.footer{text-align: center;border-top:1px solid #DDD;padding:14px 0}
+
+
+
+
+
+
+
+
+.form__message_error{background-color:#F7D7DA;border:1px solid #E1CED0}
+.form__message_success{background-color:#D3EFDC;border:1px solid #D3EFDC}
+
+.form__message_title{font-weight: bold;}
+.form__message{padding:7px 11px;border-radius:5px}
+
+
+.form__block{width:301px;margin:0 auto;border:1px solid #DDD;padding:24px 24px;border-radius:7px;background-color:#FFF;}
+  .input_wrap{margin:21px 0;}
+  .restore__link{float: right;}
+.form__variant_wrap{text-align: center;border-bottom:1px solid #DDD;margin-bottom:24px;margin-top:-15px}
+.form__variant_text{position: relative;top:7px; padding:7px;background-color: #FFF}
+
+
+
+.form_wrap{padding:94px 0;background-color:#FEFEFE}
