@@ -219,7 +219,16 @@ $arr = getCount();
         </div>
       </div>
   </div>
-</div><style type="text/css">.head__link{font-size:.9em;}</style>
+</div><style type="text/css">.head__link{font-size:.9em;}
+
+
+.head__link_active{
+
+    border-bottom: 2px solid #3f51b5;padding: 8px 14px;background-color:#FBFBFB
+}
+
+
+</style>
 
 
 <div id="qwertyy" style="position: fixed;top:0;left:0;right:0;bottom:0;z-index:9;display: none;" onClick="hide('lol');hide('qwertyy');"></div>
@@ -227,15 +236,21 @@ $arr = getCount();
 
 <div class="head head__categories" style="background-color:#FFF;border-top:1px solid #DDD;border-bottom:1px solid #DDD">
   <div class="head__wrap">
-      <a href="/main/index/?category=0" class="head__link" style="
-    border-bottom: 2px solid #3f51b5;padding: 8px 14px;background-color:#FBFBFB">Все категории <?php echo $arr[0]['COUNT(`id`)'];?></a>
-      <a href="/main/index/?category=1" class="head__link">Десерты <?php echo $arr[1]['COUNT(`id`)'];?></a>
-      <a href="/main/index/?category=2" class="head__link">Основные блюда <?php echo $arr[2]['COUNT(`id`)'];?></a>
-      <a href="/main/index/?category=3" class="head__link">Салаты <?php echo $arr[3]['COUNT(`id`)'];?></a>
-      <a href="/main/index/?category=4"  class="head__link">Коктейли <?php echo $arr[4]['COUNT(`id`)'];?></a>
-      <a href="/main/index/?category=5"  class="head__link">Супы <?php echo $arr[5]['COUNT(`id`)'];?></a>
-      <a href="/main/index/?category=6"  class="head__link">Сэндвичи <?php echo $arr[6]['COUNT(`id`)'];?></a>
-      <a href="/main/index/?category=7"  class="head__link">Пицца <?php echo $arr[7]['COUNT(`id`)'];?></a>
+    <?php
+$category=0;
+if(!empty($_GET['category'])) {
+  $category = $_GET['category'];
+}
+
+    ?>
+      <a href="/main/index/?category=0" class="head__link<?php if($category=='0')echo ' head__link_active';?>">Все категории <?php echo $arr[0]['COUNT(`id`)'];?></a>
+      <a href="/main/index/?category=1" class="head__link<?php if($category=='1')echo ' head__link_active';?>">Десерты <?php echo $arr[1]['COUNT(`id`)'];?></a>
+      <a href="/main/index/?category=2" class="head__link<?php if($category=='2')echo ' head__link_active';?>">Основные блюда <?php echo $arr[2]['COUNT(`id`)'];?></a>
+      <a href="/main/index/?category=3" class="head__link<?php if($category=='3')echo ' head__link_active';?>">Салаты <?php echo $arr[3]['COUNT(`id`)'];?></a>
+      <a href="/main/index/?category=4" class="head__link<?php if($category=='4')echo ' head__link_active';?>">Коктейли <?php echo $arr[4]['COUNT(`id`)'];?></a>
+      <a href="/main/index/?category=5" class="head__link<?php if($category=='5')echo ' head__link_active';?>">Супы <?php echo $arr[5]['COUNT(`id`)'];?></a>
+      <a href="/main/index/?category=6" class="head__link<?php if($category=='6')echo ' head__link_active';?>">Сэндвичи <?php echo $arr[6]['COUNT(`id`)'];?></a>
+      <a href="/main/index/?category=7" class="head__link<?php if($category=='7')echo ' head__link_active';?>">Пицца <?php echo $arr[7]['COUNT(`id`)'];?></a>
   </div>
 </div>
 <div class="content">
@@ -249,7 +264,19 @@ $arr = getCount();
   }
 ?>
 </div>
-<div class="footer">Test &copy; 2022</div>
+<div class="footer">
+<div>Сайт разработан специально для конкурса "Цифровой ветер - 2022" разработчиком Исаевым Тимуром</div>
+<div style="margin:21px 0;">Супер повар &copy; 2022</div>
+
+
+<div style="">
+      <img src="http://digitalwind.ru/images/ru_logo_22.png" width="114">
+  
+</div>
+
+
+
+</div>
 </div>
 
 </div>
@@ -298,13 +325,34 @@ if(User::isAuth()) {
 -->
 
 
-  <form action="/search2.php">
+
+    <div class="head__left" style="height:42px;border-bottom:1px solid #DDD;">
+      <img class="head__link" style="padding:11px;cursor: pointer;float: left;" src="/images/icons/close.png" onClick="ge('sidebar').style.marginLeft='-250px';hide('sidebar-global__layer');">
+      <a href="\" class="head__link" style="font-weight: bold;
+    position: relative;
+    font-weight: bold;
+    top: 10px;color:#000;">Супер Повар</a>
+    </div>
+
+
+
+
+
+
+
+
+
+    <form action="/search/index/" method="GET">
     <div style="border-bottom: 7px;">
-         <div class="sidebar-content__line" style="border-bottom:1px solid #DDD;"><input type="text" name="q" class="head-search" placeholder="Поиск">
-<input type="submit" value="Найти" style="margin-top:7px;border:0;width:100%;">
+         <div class="sidebar-content__line" style="border-bottom:1px solid #DDD;padding:11px;"><input type="text" name="q" class="text_field head-search" placeholder="Поиск">
+<input type="submit" value="Найти" style="margin-top:7px;border:0;width:100%;" class="button">
          </div>
       
     </div>
+
+
+
+
 
          </form>
 

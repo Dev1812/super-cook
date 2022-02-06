@@ -40,7 +40,7 @@ $mail->body = '
 <div style="font-weight:bold;padding-bottom:14px">Здравствуйте</div>
 <div style="padding-bottom:14px">Вы запросили восстановление пароля на сайте '.SITE_NAME.'</div>
 <div style="padding-bottom:14px">Для того, чтобы восстановить пароль, нажмите на кнопку ниже.</div>
-<div style="padding-bottom:14px"><a href="'.RESTORE_URL.$hash.'"><button style="
+<div style="padding-bottom:14px"><a href="'.'http://local.super-cook.io/restore/r/?token='.$hash.'"><button style="
     border: 1px solid transparent;
     border-radius: 5px;
     font-weight: 700;

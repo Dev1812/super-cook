@@ -65,7 +65,7 @@ class Controller_Main extends Controller {
     if (copy($_FILES['userfile']['tmp_name'], $uploadfile)) {
       echo json_encode(array('path' => $uploadfile));
     } else {
-      echo json_encode('is_error'=>true);
+      echo json_encode(array('is_error'=>true));
     }
   }
   

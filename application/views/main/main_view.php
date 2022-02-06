@@ -1,6 +1,27 @@
-<div style="text-align: center;padding:14px 0;">
+<div style="text-align: center;padding:0px 0;">
 	
-<div style="width:904px;margin:0 auto;">
+
+<div style="background-color:#DDD;height:391px;position: relative;" id="olololol">
+
+<div style="position: absolute;color:#FFF;top:0;right:0;z-index: 99;padding: 9px 14px;cursor: pointer;" onClick="hide('olololol');setCookie('main_background_about_block','true',7);">x закрыть</div>
+
+<div class="photo_block" style="position: absolute; background-image:url('/images/1920x1200_877569_[www.ArtFile.ru].jpg');width:100%;height:100%"></div>
+
+<div style="position:absolute;top: 0;left:0;right:0;bottom:0;background-color:#000;opacity:.44;"></div>
+<div style="position:absolute;top: 0;left:0;right:0;bottom:0;">
+
+	<div style="margin-top: 106px">
+		<div style="color:#FFF;font-size:2.3em;margin-bottom:34px;">Добро пожаловать</div>
+		<div style="color:#FFF;font-size:1.4em">Мы поможем Вам найти то самое блюдо, которое понравится Вам, Вашим родственникам или друзьям</div>
+		<a href="#loll"><div style="margin-top:44px;"><button class="button" >Начать</button></div></a>
+	</div>
+</div>
+</div>
+
+<div style="width:904px;margin:0 auto;" id="loll">
+
+
+
 
 	<style type="text/css">
 .food_block{padding:9px 9px;border:1px solid transparent;transition:all 0.14s ease;}
@@ -8,6 +29,34 @@
 
 	</style>
 <script type="text/javascript">
+
+function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+
+window.onload = function() {
+  if(getCookie('main_background_about_block') == 'true') {
+hide('olololol');
+  }
+}
+
 function deletePost(post_id) {
 var isAdmin = confirm("Вы действительно хоите удалить запись?");
 
